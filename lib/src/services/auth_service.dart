@@ -1,16 +1,15 @@
 import 'dart:async';
 
-import 'package:auth_guard/src/models/user.dart';
-import 'package:auth_guard/src/services/api_service.dart';
-import 'package:auth_guard/src/utils/http_errors.dart';
 import 'package:flutter/material.dart';
+import 'package:auth_guard/src/models/user.dart';
+import 'package:auth_guard/src/utils/http_errors.dart';
+import 'package:auth_guard/src/services/api_service.dart';
 
 class AuthService extends ValueNotifier<User> {
   final ApiService _apiSrv;
 
   AuthService(this._apiSrv) : super(null) {
     _apiSrv.onError.listen((error) {
-      print('---$error');
       if (error is UnauthorizedError) {
         value = null;
       }

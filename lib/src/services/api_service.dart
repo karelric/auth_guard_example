@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:auth_guard/src/utils/http_errors.dart';
+import '../utils/http_errors.dart';
 import 'package:http/http.dart';
 
 class ApiService extends BaseClient {

@@ -1,10 +1,7 @@
-import 'package:auth_guard/src/models/user.dart';
-import 'package:auth_guard/src/pages/auth_page.dart';
-import 'package:auth_guard/src/pages/home_page.dart';
-import 'package:auth_guard/src/providers.dart';
-import 'package:auth_guard/src/theme.dart';
-import 'package:auth_guard/src/widgets/auth_guard.dart';
 import 'package:flutter/material.dart';
+import 'package:auth_guard/src/theme.dart';
+import 'package:auth_guard/src/pages/home_page.dart';
+import 'package:auth_guard/src/widgets/auth_guard.dart';
 
 class App extends StatelessWidget {
   @override
