@@ -18,7 +18,8 @@ class AuthService extends ValueNotifier<User> {
 
   User get currentUser => value;
 
-  Future<void> signIn(String email) async {
+  Future<void> signIn(String email, String password) async {
+    /// only for test purpose
     value = User(email: email);
   }
 }

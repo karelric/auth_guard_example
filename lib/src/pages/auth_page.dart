@@ -49,7 +49,10 @@ class _AuthPageState extends State<AuthPage> {
 
   Future<void> _submit(BuildContext context) async {
     try {
-      await AuthProvider.of(context).signIn(consts.mockEmail);
+      await AuthProvider.of(context).signIn(
+        consts.mockEmail,
+        consts.mockPassword,
+      );
     } catch (e) {
       Scaffold.of(context).showSnackBar(
         SnackBar(content: Text('Something went wrong.')),
